@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="icon-fonts/elusive-icons-2.0.0/css/elusive-icons.css">
+        <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css">
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/index_init_services.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="admob/admob.js"></script>
+        <script type="application/javascript" src="galleria/galleria-1.3.6.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria.classic.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria-startup.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="console/console_widget.js"></script>
+        <script type="application/javascript" src="webrtc/socket.io.js" data-ver="0"></script>
+        <script type="application/javascript" src="webrtc/gab.websocket.js" data-ver="1"></script>
+        <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <div class="upage bgcolor" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_48_85">
+                    <div class="widget uib_w_6 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/LOGO SMANLA.png">
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="tarea widget uib_w_7 d-margins show" data-uib="media/text" data-ver="0" name="uib_w_7">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Selamat datang di Aplikasi resmi SMA Negeri 1 Sukaresmi.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_1 cst bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_2 d-margins ion cst button-small button-light ion-android-drawer icon-only" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                    <h1 class="title">SMANLA Timeline</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':275, 'side':'left', 'dur':200, 'io':true}">
+                    <div class="sidebar-content content-area vertical-col">
+
+                        <div class="widget uib_w_4 scale-image d-margins" data-uib="media/img" data-ver="0">
+                            <figure class="figure-align">
+                                <img src="images/LOGO SMANLA.png">
+
+                                <figcaption data-position="bottom"></figcaption>
+                            </figure>
+                        </div>
+                        <a class="button widget uib_w_5 d-margins ion button-small button-positive ion-android-send" data-uib="ionic/button" data-ver="0">Beranda</a>
+                        <a class="button widget uib_w_5 d-margins ion dd menu-margin button-small button-positive ion-android-earth" data-uib="ionic/button" data-ver="0">Homepage</a>
+                        <a class="button widget uib_w_5 d-margins ion button-small button-positive ion-android-settings menu-margin" data-uib="ionic/button" data-ver="0">Scan</a>
+                        <a class="button widget uib_w_5 ion button-small button-positive ion-android-call menu-margin" data-uib="ionic/button" data-ver="0">Contact</a>
+                        <a class="button widget uib_w_5 ion button-small button-positive ion-android-contact menu-margin" data-uib="ionic/button" data-ver="0">About</a>
+                    </div>
+                </div>
+                <div id="homepage" class="upage-content vertical-col left hidden"></div>
+                <div id="scanPage" class="upage-content vertical-col left hidden"></div>
+                <div id="Contact-page" class="upage-content vertical-col left hidden">
+                    <div class="widget uib_w_8 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/LOGO SMANLA.png">
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="tarea widget uib_w_9 d-margins contact" data-uib="media/text" data-ver="0" name="uib_w_9">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2>Contact Us</h2>
+                        </div>
+                    </div>
+                    <label class="item item-input widget uib_w_10 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Nama</span>
+                        <input type="text" placeholder="Nama">
+                    </label>
+                    <label class="item item-input widget uib_w_11 d-margins contact-margin" data-uib="ionic/input" data-ver="0"><span class="input-label">Kelas</span>
+                        <input type="text" placeholder="Kelas">
+                    </label>
+                    <label class="item item-input widget uib_w_12 d-margins contact-margin" data-uib="ionic/textarea" data-ver="0">
+                        <textarea placeholder="Pesan anda ..." rows="2" wrap="soft"></textarea>
+                    </label>
+                    <li class="item item-checkbox widget uib_w_13 d-margins" data-uib="ionic/checkbox" data-ver="0">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                        </label>Dengan ini anda menyetujui layanan</li>
+                    <a href="mailto:rifqymaulana818@gmail.com" class="button widget uib_w_14 d-margins button-small button-positive" data-uib="ionic/button" data-ver="0">Kirim</a>
+                </div>
+                <div id="about-Page" class="upage-content vertical-col left hidden">
+                    <div class="tarea widget uib_w_15 d-margins" data-uib="media/text" data-ver="0" name="uib_w_15">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2>SMANLA Timeline</h2>
+
+                            <p>Aplikasi Resmi SMA Negeri 1 Sukaresmi yang dikembangkan untuk memberikan informasi dalam bentuk Beep Notif ke perangkat Android atau Ios yang dimiliki siswa.</p>
+
+                            <p>Dikembangkan oleh : <a href="http://archipelaqy.web.id">Archipelaqy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
